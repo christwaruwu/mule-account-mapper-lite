@@ -1,0 +1,116 @@
+user_id,name,account_id,account_type,is_mule
+USER_0082,Natalia Simanjuntak,5022961201836675,Tabungan,False
+USER_0005,Cakrajiya Lailasari,4192832764835030,Giro,False
+USER_0041,Kamal Nurdiyanti,1850671657262849,Giro,False
+USER_0070,Adhiarja Firmansyah,0985931746120047,Tabungan,False
+USER_0011,"Ir. Viktor Mayasari, S.Pd",8248963834657871,Tabungan,False
+USER_0046,Sutan Mulyono Hidayanto,7498941343524082,Giro,False
+USER_0071,KH. Ian Marbun,1382675869261796,Giro,False
+USER_0067,"Sutan Ibrahim Suartini, S.I.Kom",9421047095214562,Tabungan,False
+USER_0048,Rini Wasita,7116719022941318,Giro,False
+USER_0012,"Sutan Marsudi Purwanti, S.Pd",3150983930103105,Tabungan,False
+MULE_0001,Gamani Salahudin,9010432898614341,Tabungan,True
+USER_0037,Mutia Maheswara,1627204653755646,Giro,False
+USER_0085,"Asmuni Rajata, M.Ak",0343244510762268,Tabungan,False
+MULE_0014,Tgk. Juli Aryani,7058957829114678,Tabungan,True
+USER_0019,"Ghani Tampubolon, S.Farm",4353462475107991,Tabungan,False
+USER_0001,"Bahuraksa Winarsih, S.E.I",1043321819600133,Tabungan,False
+USER_0073,Opan Damanik,1390053293183933,Giro,False
+USER_0027,Fitria Utama,5698169340608835,Giro,False
+MULE_0006,R. Agus Natsir,3054868740345054,Tabungan,True
+USER_0054,"Tina Firmansyah, S.E.",8742967175655125,Giro,False
+USER_0095,"drg. Langgeng Susanti, S.E.I",6850542357332214,Tabungan,False
+MULE_0013,Eluh Utami,5518844225831323,Tabungan,True
+USER_0013,"Balapati Prasasta, S.I.Kom",8347382997376311,Giro,False
+USER_0032,"Tomi Widodo, S.H.",2870831727889579,Giro,False
+USER_0068,Manah Habibi,2858842474517123,Giro,False
+USER_0094,Julia Usada,5192546291486528,Tabungan,False
+MULE_0010,"Vanya Adriansyah, M.Pd",7021355690927557,Tabungan,True
+USER_0023,Ajeng Nashiruddin,1280598262045053,Tabungan,False
+USER_0045,Ir. Rangga Budiman,6855744431351823,Tabungan,False
+MULE_0009,Rudi Suartini,5705964016582029,Tabungan,True
+USER_0079,Titin Yulianti,7111161528098851,Giro,False
+USER_0016,"R.M. Tomi Prasetyo, M.M.",3602606474687234,Tabungan,False
+USER_0031,Fitriani Rajasa,3791769367632016,Tabungan,False
+USER_0084,drg. Uli Siregar,6438156149784036,Tabungan,False
+USER_0010,Prasetya Damanik,7015430391171822,Giro,False
+USER_0034,Oskar Gunawan,5581223623166587,Giro,False
+USER_0063,"Cakrabirawa Usada, S.Kom",4005045562386922,Tabungan,False
+USER_0066,"Siti Agustina, M.Pd",9440640909743953,Tabungan,False
+USER_0029,Kurnia Sihombing,2994680443699577,Giro,False
+USER_0043,"Cut Lidya Hartati, S.Sos",5273545494808313,Giro,False
+USER_0006,"R. Puji Sinaga, M.Ak",6413953767242388,Giro,False
+USER_0056,Ira Lailasari,0385977034824771,Tabungan,False
+USER_0065,Daliman Nuraini,1759464743671369,Giro,False
+USER_0040,R. Prabu Wulandari,9663193149190586,Giro,False
+USER_0036,"R. Jatmiko Dongoran, S.Kom",7346706562729806,Tabungan,False
+USER_0017,Kamidin Permadi,0980500978820812,Tabungan,False
+MULE_0011,Diana Tamba,1928565431027868,Tabungan,True
+USER_0035,"Talia Kusmawati, M.TI.",0366909670546688,Tabungan,False
+USER_0057,KH. Catur Gunarto,9324808613171274,Giro,False
+USER_0008,"Kamaria Mustofa, S.Pt",6697848018451462,Giro,False
+USER_0044,"Betania Wibowo, S.I.Kom",7837770143634957,Giro,False
+USER_0069,Gandi Prasasta,8516048175496513,Giro,False
+MULE_0005,"Jane Waluyo, S.E.I",2058527722170430,Tabungan,True
+USER_0028,Sutan Danuja Firgantoro,1595148465648236,Giro,False
+USER_0020,Endra Zulaika,8384251354278498,Tabungan,False
+USER_0092,Patricia Prayoga,8207151820377889,Tabungan,False
+USER_0097,Mala Namaga,5379473834735977,Giro,False
+USER_0026,Tugiman Pratama,4586850142940196,Giro,False
+USER_0009,"Ratih Hidayat, S.Pd",0482814893252880,Giro,False
+USER_0086,Ihsan Nuraini,8851606071596966,Giro,False
+USER_0050,Pranata Pudjiastuti,3341232812067974,Tabungan,False
+USER_0014,Irma Saputra,5667010651333872,Giro,False
+USER_0081,Embuh Wijaya,1493689980940244,Giro,False
+USER_0025,Oni Andriani,1607337543303654,Tabungan,False
+USER_0004,Karya Prasetyo,9310341316475255,Tabungan,False
+USER_0018,Caket Wahyudin,9136193990916998,Giro,False
+USER_0039,Putri Latupono,7193745299124190,Giro,False
+USER_0089,Lanang Hariyah,2432921277997995,Giro,False
+USER_0007,Muni Widodo,9696532871012269,Tabungan,False
+USER_0074,Ade Wahyuni,2904228421020539,Giro,False
+USER_0099,"Sutan Cahyanto Winarno, M.Kom.",1247826137506068,Giro,False
+USER_0091,Pardi Pangestu,5411998679807935,Giro,False
+USER_0055,"R.M. Tasdik Wahyudin, S.IP",7468071545168087,Giro,False
+USER_0051,R. Kania Zulaika,3447134936183242,Tabungan,False
+USER_0077,Nrima Saptono,1249985698478961,Tabungan,False
+USER_0047,"H. Gilang Suartini, S.IP",0084271094777520,Giro,False
+USER_0078,Paramita Aryani,8367365766156545,Tabungan,False
+USER_0062,Legawa Pudjiastuti,8657809134316117,Tabungan,False
+MULE_0012,"Drs. Kadir Hutasoit, S.Kom",1447394731217271,Tabungan,True
+USER_0080,Syahrini Fujiati,5604945198327315,Giro,False
+USER_0090,"Adinata Firmansyah, S.IP",2717744905814770,Tabungan,False
+USER_0042,"Puti Anastasia Saragih, S.Psi",7694531473799650,Giro,False
+USER_0059,"Luluh Pranowo, S.Ked",0449972787558867,Giro,False
+USER_0049,Puti Dalima Budiman,9993867749649909,Tabungan,False
+USER_0098,Pardi Rahayu,6886239240758181,Giro,False
+USER_0058,"H. Balijan Permadi, S.IP",6773782639821465,Giro,False
+USER_0076,Violet Hassanah,9084700766177115,Tabungan,False
+USER_0033,Harjo Santoso,8727743487347143,Giro,False
+MULE_0008,Karimah Megantara,6928451154479627,Tabungan,True
+USER_0060,Ganjaran Mayasari,3396360576627028,Giro,False
+USER_0064,"Tgk. Jono Damanik, M.Pd",1969379237474074,Tabungan,False
+USER_0096,"Kania Purnawati, M.Farm",8880592962229270,Giro,False
+USER_0038,drg. Prayoga Nasyidah,1708053100330923,Tabungan,False
+USER_0030,Bagya Napitupulu,3872148951343320,Tabungan,False
+MULE_0002,"Bagas Wastuti, M.Farm",0369711798089324,Tabungan,True
+USER_0002,Ella Ramadan,8386379402654235,Tabungan,False
+USER_0053,"Gasti Oktaviani, S.IP",9065940139904902,Giro,False
+USER_0022,KH. Praba Laksita,4016400524278680,Tabungan,False
+USER_0003,"Malik Mardhiyah, S.Kom",1615594078161849,Giro,False
+USER_0024,Yosef Maryadi,1586923226025634,Tabungan,False
+USER_0100,Padma Prasetya,3615305152204727,Giro,False
+USER_0088,Paulin Wibowo,6453521818835523,Tabungan,False
+MULE_0004,"Manah Puspita, M.Farm",8067065405153195,Tabungan,True
+USER_0075,Gilda Safitri,0240268117758917,Tabungan,False
+USER_0087,Paulin Agustina,1605297516136968,Tabungan,False
+USER_0083,Puti Nabila Adriansyah,5459910229014767,Giro,False
+MULE_0015,Kani Simbolon,6691251778528922,Tabungan,True
+USER_0021,"Eli Hutasoit, M.Pd",8412411824493534,Giro,False
+USER_0061,"T. Emil Pradana, M.Pd",1718702621745961,Giro,False
+USER_0072,"Tgk. Gasti Purwanti, S.Gz",0537735158506431,Giro,False
+MULE_0007,"KH. Garan Maulana, S.E.I",1566765277584161,Tabungan,True
+USER_0015,Mutia Fujiati,2473178108013267,Giro,False
+USER_0093,Bagas Mansur,5546659051518644,Tabungan,False
+USER_0052,Oliva Situmorang,0249947174648877,Tabungan,False
+MULE_0003,dr. Septi Hariyah,6095396218518888,Tabungan,True
