@@ -17,6 +17,20 @@ import plotly.express as px
 import plotly.graph_objects as go
 import sys
 import os
+import streamlit.components.v1 as components
+
+st.subheader("🕸️ Peta Jaringan Transaksi (Network Graph)")
+st.markdown("Node merah menandakan kandidat Mule Account. Perbesar (zoom) untuk melihat detail aliran data.")
+
+#Pastikan kamu sudah men-generate file HTML dari PyVis sebelumnya
+try:
+    # Membaca file HTML yang dihasilkan oleh PyVis
+    HtmlFile = open("docs/images/network.html", 'r', encoding='utf-8')
+    source_code = HtmlFile.read() 
+    # Menampilkan file HTML interaktif di dalam Streamlit
+    components.html(source_code, height=600, scrolling=True)
+except FileNotFoundError:
+    st.warning("⚠️ File visualisasi jaringan (network.html) belum di-generate. Jalankan visualizer.py terlebih dahulu.")
 
 #Tambah path agar bisa import dari src/
 sys.path.append(os.path.join(os.path.dirname(__file__),'..'))
@@ -32,16 +46,26 @@ st.set_page_config(
 #CSS custom untuk styling
 st.markdown("""
 <style>
-    .metric-card {
-        background-color: #1e1e2e;
-        padding: 1rem;
-        border-radius: 10px;
-        border-left: 4px solid;
-    }
-    .high-risk { border-color: #ff4444; }
-    .medium-risk { border-color: #ff8800; }
-    .low-risk { border-color: #44bb44; }
-    .stMetric { background-color: #16213e; border-radius: 8px; padding: 10px; }
+.metric-card {
+    background-color: #1e1e2e;
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid;
+}
+.high-risk { border-color: #ff4444; }
+.medium-risk { border-color: #ff8800; }
+.low-risk { border-color: #44bb44; }
+
+/* PERBAIKAN: Memaksa background gelap dan teks SELALU putih */
+[data-testid="stMetric"], .stMetric { 
+    background-color: #16213e !important; 
+    border-radius: 8px !important; 
+    padding: 15px !important; 
+    border: 1px solid #2d3748 !important;
+}
+[data-testid="stMetric"] *, .stMetric * {
+    color: #ffffff !important; 
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -246,23 +270,46 @@ if selected_account:
     col_d1, col_d2, col_d3 = st.columns(3)
 
     with col_d1:
-        st.markdown("**📋 Profil Akun: ")
-        st.write(f"**Account ID:** {account_data['account_id']}")
+        st.markdown("**📋 Profil Akun:**")
+        st.write(f"**Account ID:** `{account_data['account_id']}`")
         st.write(f"**Risk Level:** {account_data['risk_level']}")
-        st.write(f"**Risk Score:** {account_data['risk_score']:.0f}/100")
-        st.write(f"**PageRank Score:** {account_data['pagerank_score']:.2f}")
-    
+        
+        #Menggunakan st.metric dengan parameter 'help'
+        st.metric(label="Risk Score ℹ️", 
+                  value=f"{account_data['risk_score']:.0f}/100", 
+                  help="Skor 0-100. Di atas 70 berarti akun sangat berbahaya dan butuh investigasi segera (Freeze Account).")
+        
+        st.metric(label="PageRank Score ℹ️", 
+                  value=f"{account_data['pagerank_score']:.2f}",
+                  help="Metrik Kecerdasan Buatan (AI). Mengukur seberapa 'sentral' akun ini di dalam jaringan sindikat penipuan. Semakin tinggi, semakin besar kemungkinan ini adalah Master Account.")
+
     with col_d2:
-        st.markdown("**💰 Aktivitas Keuangan: ")
-        st.write(f"**Total Diterima:** Rp {account_data['total_received']:,.0f}")
-        st.write(f"**Total Dikirim:** Rp {account_data['total_sent']:,.0f}")
-        st.write(f"**Net Flow:** Rp {account_data['net_flow']:,.0f}")
-    
+        st.markdown("**💰 Aktivitas Keuangan:**")
+        st.metric(label="Total Diterima ℹ️", 
+                  value=f"Rp {account_data['total_received']:,.0f}",
+                  help="Total akumulasi uang masuk ke rekening ini.")
+        
+        st.metric(label="Total Dikirim ℹ️", 
+                  value=f"Rp {account_data['total_sent']:,.0f}",
+                  help="Total uang yang diteruskan/dicuci ke rekening lain.")
+        
+        st.metric(label="Net Flow ℹ️", 
+                  value=f"Rp {account_data['net_flow']:,.0f}",
+                  help="Selisih uang masuk dan keluar. Mule account biasanya memiliki Net Flow mendekati 0 karena uang hanya 'numpang lewat' (Pola Pass-Through).")
+
     with col_d3:
         st.markdown("**🔗 Koneksi Jaringan:**")
-        st.write(f"**In-Degree (penerima dari):** {account_data['in_degree']:.0f}")
-        st.write(f"**Out-Degree (pengirim ke):** {account_data['out_degree']:.0f}")
-        st.write(f"**Total Koneksi:** {account_data['total_degree']:.0f}")
+        st.metric(label="In-Degree (Jumlah Pengirim) ℹ️", 
+                  value=f"{account_data['in_degree']:.0f}",
+                  help="Jumlah rekening BERBEDA yang mengirim uang ke sini. Jika sangat banyak, ini ciri khas akun penampung uang dari korban-korban penipuan.")
+        
+        st.metric(label="Out-Degree (Jumlah Penerima) ℹ️", 
+                  value=f"{account_data['out_degree']:.0f}",
+                  help="Jumlah rekening tujuan transfer. Mule account biasanya mentransfer seluruh uang ke 1 atau 2 akun 'Master' untuk dikumpulkan.")
+        
+        st.metric(label="Total Koneksi ℹ️",
+                  value=f"{account_data['total_degree']:.0f}",
+                  help="Total interaksi unik dengan rekening lain di dalam ekosistem.")
     
     #Rule yang terpicu
     if pd.notna(account_data['triggered_rules']) and account_data['triggered_rules']:
